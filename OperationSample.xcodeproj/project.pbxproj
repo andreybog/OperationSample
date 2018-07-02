@@ -12,6 +12,10 @@
 		5590BDF220EAC90D0024E183 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5590BDF020EAC90D0024E183 /* Main.storyboard */; };
 		5590BDF420EAC90E0024E183 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5590BDF320EAC90E0024E183 /* Assets.xcassets */; };
 		5590BDF720EAC90E0024E183 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5590BDF520EAC90E0024E183 /* LaunchScreen.storyboard */; };
+		5590BE0020EAC9FA0024E183 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590BDFF20EAC9FA0024E183 /* BaseOperation.swift */; };
+		5590BE0320EACDB80024E183 /* NSLocking+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590BE0220EACDB80024E183 /* NSLocking+Extensions.swift */; };
+		5590BE0620EAD06A0024E183 /* OperationCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590BE0520EAD06A0024E183 /* OperationCondition.swift */; };
+		5590BE0820EAD6C90024E183 /* OperationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590BE0720EAD6C90024E183 /* OperationErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		5590BDF320EAC90E0024E183 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5590BDF620EAC90E0024E183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5590BDF820EAC90E0024E183 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5590BDFF20EAC9FA0024E183 /* BaseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
+		5590BE0220EACDB80024E183 /* NSLocking+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLocking+Extensions.swift"; sourceTree = "<group>"; };
+		5590BE0520EAD06A0024E183 /* OperationCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCondition.swift; sourceTree = "<group>"; };
+		5590BE0720EAD6C90024E183 /* OperationErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,9 @@
 		5590BDEB20EAC90D0024E183 /* OperationSample */ = {
 			isa = PBXGroup;
 			children = (
+				5590BE0120EACDA50024E183 /* Extensions */,
+				5590BDFE20EAC9D70024E183 /* Operations */,
+				5590BE0420EAD0500024E183 /* Conditions */,
 				5590BDEC20EAC90D0024E183 /* AppDelegate.swift */,
 				5590BDEE20EAC90D0024E183 /* ViewController.swift */,
 				5590BDF020EAC90D0024E183 /* Main.storyboard */,
@@ -62,6 +73,31 @@
 				5590BDF820EAC90E0024E183 /* Info.plist */,
 			);
 			path = OperationSample;
+			sourceTree = "<group>";
+		};
+		5590BDFE20EAC9D70024E183 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				5590BDFF20EAC9FA0024E183 /* BaseOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		5590BE0120EACDA50024E183 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5590BE0220EACDB80024E183 /* NSLocking+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5590BE0420EAD0500024E183 /* Conditions */ = {
+			isa = PBXGroup;
+			children = (
+				5590BE0720EAD6C90024E183 /* OperationErrors.swift */,
+				5590BE0520EAD06A0024E183 /* OperationCondition.swift */,
+			);
+			path = Conditions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5590BE0320EACDB80024E183 /* NSLocking+Extensions.swift in Sources */,
+				5590BE0020EAC9FA0024E183 /* BaseOperation.swift in Sources */,
 				5590BDEF20EAC90D0024E183 /* ViewController.swift in Sources */,
 				5590BDED20EAC90D0024E183 /* AppDelegate.swift in Sources */,
+				5590BE0820EAD6C90024E183 /* OperationErrors.swift in Sources */,
+				5590BE0620EAD06A0024E183 /* OperationCondition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
