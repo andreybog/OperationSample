@@ -24,6 +24,14 @@ class BaseOperation: Operation {
     //MARK: -
     //MARK: State Management
     
+    /**
+     Indicates that the Operation can now begin to evaluate readiness conditions,
+     if appropriate.
+     */
+    func willEnqueue() {
+        state = .pending
+    }
+    
     private var _state = State.initialized
     private let stateLock = NSLock()
     
@@ -109,7 +117,109 @@ class BaseOperation: Operation {
     
     private(set) var conditions: [OperationCondition] = []
     
+    func addCondition(_ condition: OperationCondition) {
+        assert(state < .evaluatingConditions, "Cannot modify conditions after execution has begun.")
+        
+        conditions.append(condition)
+    }
+    
+    private(set) var observers: [OperationObserver] = []
+    
+    func addObserver(_ observer: OperationObserver) {
+        assert(state < .executing, "Cannot modify observers after execution has begun.")
+        
+        observers.append(observer)
+    }
+    
+    override func addDependency(_ op: Operation) {
+        assert(state < .executing, "Dependencies cannot be modified after execution has begun.")
+        
+        super.addDependency(op)
+    }
+    
+    //MARK: -
+    //MARK: Execution and Cancellation
+    
+    override final func start() {
+        super.start()
+        
+        if isCancelled {
+            finish()
+        }
+    }
+    
+    override final func main() {
+        assert(state == .ready, "This operation must be performed on an operation queue.")
+        
+        if _internalErrors.isEmpty && !isCancelled {
+            state = .executing
+            
+            for observer in observers {
+                observer.operationDidStart(self)
+            }
+            
+            execute()
+        }
+        else {
+            finish()
+        }
+    }
+    
+    open func execute() {
+        print("\(type(of: self)) must override `execute()`.")
+        
+        finish()
+    }
+    
     private var _internalErrors: [NSError] = []
+    
+    func cancelWithError(_ error: NSError? = nil) {
+        if let error = error {
+            _internalErrors.append(error)
+        }
+        
+        cancel()
+    }
+    
+    //MARK: -
+    //MARK: Finishing
+    
+    /**
+     A private property to ensure we only notify the observers once that the
+     operation has finished.
+     */
+    private var hasFinishedAlready = false
+    
+    final func finish(_ errors: [NSError] = []) {
+        if !hasFinishedAlready {
+            hasFinishedAlready = true
+            state = .finishing
+            
+            let combinedErrors = _internalErrors + errors
+            finished(combinedErrors)
+            
+            for observer in observers {
+                observer.operationDidFinish(self, errors: combinedErrors)
+            }
+            
+            state = .finished
+        }
+    }
+    
+    /**
+     Subclasses may override `finished(_:)` if they wish to react to the operation
+     finishing with errors. For example, the `LoadModelOperation` implements
+     this method to potentially inform the user about an error when trying to
+     bring up the Core Data stack.
+     */
+    
+    open func finished(_ errors: [NSError]) {
+        // No op.
+    }
+    
+    override final func waitUntilFinished() {
+        fatalError("Waiting on operations is an anti-pattern. Remove this ONLY if you're absolutely sure there is No Other Way™.")
+    }
 }
 
 //MARK: -

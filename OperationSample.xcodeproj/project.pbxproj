@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55131F0A20F00A2100AEE5CC /* OperationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55131F0920F00A2100AEE5CC /* OperationObserver.swift */; };
+		55131F0E20F0122D00AEE5CC /* BaseOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55131F0D20F0122D00AEE5CC /* BaseOperationQueue.swift */; };
+		55131F1220F0139E00AEE5CC /* BlockObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55131F1120F0139E00AEE5CC /* BlockObserver.swift */; };
+		55131F1420F018A000AEE5CC /* ExclusivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55131F1320F018A000AEE5CC /* ExclusivityController.swift */; };
+		55131F1620F01F2600AEE5CC /* TimeoutObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55131F1520F01F2600AEE5CC /* TimeoutObserver.swift */; };
+		55131F1E20F0233300AEE5CC /* Earthquakes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55131F1C20F0233300AEE5CC /* Earthquakes.xcdatamodeld */; };
+		55131F2020F0254800AEE5CC /* Earthquake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55131F1F20F0254800AEE5CC /* Earthquake.swift */; };
+		55131F2220F029E100AEE5CC /* RemoteNotificationCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55131F2120F029E100AEE5CC /* RemoteNotificationCondition.swift */; };
 		5590BDED20EAC90D0024E183 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590BDEC20EAC90D0024E183 /* AppDelegate.swift */; };
 		5590BDEF20EAC90D0024E183 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590BDEE20EAC90D0024E183 /* ViewController.swift */; };
-		5590BDF220EAC90D0024E183 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5590BDF020EAC90D0024E183 /* Main.storyboard */; };
 		5590BDF420EAC90E0024E183 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5590BDF320EAC90E0024E183 /* Assets.xcassets */; };
-		5590BDF720EAC90E0024E183 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5590BDF520EAC90E0024E183 /* LaunchScreen.storyboard */; };
 		5590BE0020EAC9FA0024E183 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590BDFF20EAC9FA0024E183 /* BaseOperation.swift */; };
 		5590BE0320EACDB80024E183 /* NSLocking+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590BE0220EACDB80024E183 /* NSLocking+Extensions.swift */; };
 		5590BE0620EAD06A0024E183 /* OperationCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590BE0520EAD06A0024E183 /* OperationCondition.swift */; };
@@ -19,12 +25,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55131F0920F00A2100AEE5CC /* OperationObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationObserver.swift; sourceTree = "<group>"; };
+		55131F0D20F0122D00AEE5CC /* BaseOperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperationQueue.swift; sourceTree = "<group>"; };
+		55131F1120F0139E00AEE5CC /* BlockObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockObserver.swift; sourceTree = "<group>"; };
+		55131F1320F018A000AEE5CC /* ExclusivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExclusivityController.swift; sourceTree = "<group>"; };
+		55131F1520F01F2600AEE5CC /* TimeoutObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeoutObserver.swift; sourceTree = "<group>"; };
+		55131F1920F0228100AEE5CC /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		55131F1A20F0228100AEE5CC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		55131F1D20F0233300AEE5CC /* Earthquakes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Earthquakes.xcdatamodel; sourceTree = "<group>"; };
+		55131F1F20F0254800AEE5CC /* Earthquake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Earthquake.swift; sourceTree = "<group>"; };
+		55131F2120F029E100AEE5CC /* RemoteNotificationCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationCondition.swift; sourceTree = "<group>"; };
 		5590BDE920EAC90D0024E183 /* OperationSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OperationSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5590BDEC20EAC90D0024E183 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5590BDEE20EAC90D0024E183 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5590BDF120EAC90D0024E183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5590BDF320EAC90E0024E183 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5590BDF620EAC90E0024E183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5590BDF820EAC90E0024E183 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5590BDFF20EAC9FA0024E183 /* BaseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
 		5590BE0220EACDB80024E183 /* NSLocking+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLocking+Extensions.swift"; sourceTree = "<group>"; };
@@ -43,6 +57,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55131F0820F009F400AEE5CC /* Observers */ = {
+			isa = PBXGroup;
+			children = (
+				55131F0920F00A2100AEE5CC /* OperationObserver.swift */,
+				55131F1120F0139E00AEE5CC /* BlockObserver.swift */,
+				55131F1520F01F2600AEE5CC /* TimeoutObserver.swift */,
+			);
+			path = Observers;
+			sourceTree = "<group>";
+		};
+		55131F0B20F011DD00AEE5CC /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				5590BDFF20EAC9FA0024E183 /* BaseOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		55131F0C20F011F200AEE5CC /* OperationQueue */ = {
+			isa = PBXGroup;
+			children = (
+				55131F0D20F0122D00AEE5CC /* BaseOperationQueue.swift */,
+				55131F1320F018A000AEE5CC /* ExclusivityController.swift */,
+			);
+			path = OperationQueue;
+			sourceTree = "<group>";
+		};
+		55131F1820F0224F00AEE5CC /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				55131F1920F0228100AEE5CC /* LaunchScreen.xib */,
+				55131F1A20F0228100AEE5CC /* Main.storyboard */,
+				5590BDF320EAC90E0024E183 /* Assets.xcassets */,
+				5590BDF820EAC90E0024E183 /* Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		55131F1B20F022E300AEE5CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55131F1C20F0233300AEE5CC /* Earthquakes.xcdatamodeld */,
+				55131F1F20F0254800AEE5CC /* Earthquake.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5590BDE020EAC90D0024E183 = {
 			isa = PBXGroup;
 			children = (
@@ -62,15 +123,12 @@
 		5590BDEB20EAC90D0024E183 /* OperationSample */ = {
 			isa = PBXGroup;
 			children = (
+				55131F1B20F022E300AEE5CC /* Model */,
 				5590BE0120EACDA50024E183 /* Extensions */,
 				5590BDFE20EAC9D70024E183 /* Operations */,
-				5590BE0420EAD0500024E183 /* Conditions */,
 				5590BDEC20EAC90D0024E183 /* AppDelegate.swift */,
 				5590BDEE20EAC90D0024E183 /* ViewController.swift */,
-				5590BDF020EAC90D0024E183 /* Main.storyboard */,
-				5590BDF320EAC90E0024E183 /* Assets.xcassets */,
-				5590BDF520EAC90E0024E183 /* LaunchScreen.storyboard */,
-				5590BDF820EAC90E0024E183 /* Info.plist */,
+				55131F1820F0224F00AEE5CC /* SupportingFiles */,
 			);
 			path = OperationSample;
 			sourceTree = "<group>";
@@ -78,7 +136,10 @@
 		5590BDFE20EAC9D70024E183 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				5590BDFF20EAC9FA0024E183 /* BaseOperation.swift */,
+				55131F0C20F011F200AEE5CC /* OperationQueue */,
+				55131F0B20F011DD00AEE5CC /* Operations */,
+				55131F0820F009F400AEE5CC /* Observers */,
+				5590BE0420EAD0500024E183 /* Conditions */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -96,6 +157,7 @@
 			children = (
 				5590BE0720EAD6C90024E183 /* OperationErrors.swift */,
 				5590BE0520EAD06A0024E183 /* OperationCondition.swift */,
+				55131F2120F029E100AEE5CC /* RemoteNotificationCondition.swift */,
 			);
 			path = Conditions;
 			sourceTree = "<group>";
@@ -158,9 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5590BDF720EAC90E0024E183 /* LaunchScreen.storyboard in Resources */,
 				5590BDF420EAC90E0024E183 /* Assets.xcassets in Resources */,
-				5590BDF220EAC90D0024E183 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,33 +233,22 @@
 			files = (
 				5590BE0320EACDB80024E183 /* NSLocking+Extensions.swift in Sources */,
 				5590BE0020EAC9FA0024E183 /* BaseOperation.swift in Sources */,
+				55131F0A20F00A2100AEE5CC /* OperationObserver.swift in Sources */,
 				5590BDEF20EAC90D0024E183 /* ViewController.swift in Sources */,
+				55131F0E20F0122D00AEE5CC /* BaseOperationQueue.swift in Sources */,
+				55131F1620F01F2600AEE5CC /* TimeoutObserver.swift in Sources */,
+				55131F1E20F0233300AEE5CC /* Earthquakes.xcdatamodeld in Sources */,
+				55131F1220F0139E00AEE5CC /* BlockObserver.swift in Sources */,
 				5590BDED20EAC90D0024E183 /* AppDelegate.swift in Sources */,
 				5590BE0820EAD6C90024E183 /* OperationErrors.swift in Sources */,
+				55131F2220F029E100AEE5CC /* RemoteNotificationCondition.swift in Sources */,
+				55131F2020F0254800AEE5CC /* Earthquake.swift in Sources */,
 				5590BE0620EAD06A0024E183 /* OperationCondition.swift in Sources */,
+				55131F1420F018A000AEE5CC /* ExclusivityController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		5590BDF020EAC90D0024E183 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5590BDF120EAC90D0024E183 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5590BDF520EAC90E0024E183 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5590BDF620EAC90E0024E183 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5590BDF920EAC90E0024E183 /* Debug */ = {
@@ -374,6 +423,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55131F1C20F0233300AEE5CC /* Earthquakes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55131F1D20F0233300AEE5CC /* Earthquakes.xcdatamodel */,
+			);
+			currentVersion = 55131F1D20F0233300AEE5CC /* Earthquakes.xcdatamodel */;
+			path = Earthquakes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5590BDE120EAC90D0024E183 /* Project object */;
 }
