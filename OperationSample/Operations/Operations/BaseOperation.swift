@@ -181,8 +181,32 @@ class BaseOperation: Operation {
         cancel()
     }
     
+    final func produceOperation(_ operation: Operation) {
+        for observer in observers {
+            observer.operation(self, didProduceOperation: operation)
+        }
+    }
+    
     //MARK: -
     //MARK: Finishing
+    
+    /**
+     Most operations may finish with a single error, if they have one at all.
+     This is a convenience method to simplify calling the actual `finish()`
+     method. This is also useful if you wish to finish with an error provided
+     by the system frameworks. As an example, see `DownloadEarthquakesOperation`
+     for how an error from an `NSURLSession` is passed along via the
+     `finishWithError()` method.
+     */
+    
+    final func finishWithError(_ error: NSError?) {
+        if let error = error {
+            finish([error])
+        }
+        else {
+            finish()
+        }
+    }
     
     /**
      A private property to ensure we only notify the observers once that the

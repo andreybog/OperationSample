@@ -15,6 +15,14 @@
 		55131F1E20F0233300AEE5CC /* Earthquakes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55131F1C20F0233300AEE5CC /* Earthquakes.xcdatamodeld */; };
 		55131F2020F0254800AEE5CC /* Earthquake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55131F1F20F0254800AEE5CC /* Earthquake.swift */; };
 		55131F2220F029E100AEE5CC /* RemoteNotificationCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55131F2120F029E100AEE5CC /* RemoteNotificationCondition.swift */; };
+		55131F2420F163D100AEE5CC /* Operation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55131F2320F163D100AEE5CC /* Operation+Extensions.swift */; };
+		55131F2620F166EF00AEE5CC /* MutuallyExclusive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55131F2520F166EF00AEE5CC /* MutuallyExclusive.swift */; };
+		551A6AC220F6AE8400F43A65 /* APBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A6AC120F6AE8400F43A65 /* APBlockOperation.swift */; };
+		551A6AC420F6B17800F43A65 /* GroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A6AC320F6B17800F43A65 /* GroupOperation.swift */; };
+		551A6AC620F6B5A000F43A65 /* URLSessionTaskOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A6AC520F6B5A000F43A65 /* URLSessionTaskOperation.swift */; };
+		551A6AD820F7EF1E00F43A65 /* LocationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A6AD720F7EF1E00F43A65 /* LocationOperation.swift */; };
+		551A6ADA20F7F01D00F43A65 /* LocationCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A6AD920F7F01D00F43A65 /* LocationCondition.swift */; };
+		551A6ADC20F7F9BF00F43A65 /* DelayOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A6ADB20F7F9BF00F43A65 /* DelayOperation.swift */; };
 		5590BDED20EAC90D0024E183 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590BDEC20EAC90D0024E183 /* AppDelegate.swift */; };
 		5590BDEF20EAC90D0024E183 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590BDEE20EAC90D0024E183 /* ViewController.swift */; };
 		5590BDF420EAC90E0024E183 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5590BDF320EAC90E0024E183 /* Assets.xcassets */; };
@@ -35,6 +43,14 @@
 		55131F1D20F0233300AEE5CC /* Earthquakes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Earthquakes.xcdatamodel; sourceTree = "<group>"; };
 		55131F1F20F0254800AEE5CC /* Earthquake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Earthquake.swift; sourceTree = "<group>"; };
 		55131F2120F029E100AEE5CC /* RemoteNotificationCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationCondition.swift; sourceTree = "<group>"; };
+		55131F2320F163D100AEE5CC /* Operation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operation+Extensions.swift"; sourceTree = "<group>"; };
+		55131F2520F166EF00AEE5CC /* MutuallyExclusive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutuallyExclusive.swift; sourceTree = "<group>"; };
+		551A6AC120F6AE8400F43A65 /* APBlockOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APBlockOperation.swift; sourceTree = "<group>"; };
+		551A6AC320F6B17800F43A65 /* GroupOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupOperation.swift; sourceTree = "<group>"; };
+		551A6AC520F6B5A000F43A65 /* URLSessionTaskOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTaskOperation.swift; sourceTree = "<group>"; };
+		551A6AD720F7EF1E00F43A65 /* LocationOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationOperation.swift; sourceTree = "<group>"; };
+		551A6AD920F7F01D00F43A65 /* LocationCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCondition.swift; sourceTree = "<group>"; };
+		551A6ADB20F7F9BF00F43A65 /* DelayOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayOperation.swift; sourceTree = "<group>"; };
 		5590BDE920EAC90D0024E183 /* OperationSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OperationSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5590BDEC20EAC90D0024E183 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5590BDEE20EAC90D0024E183 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +87,11 @@
 			isa = PBXGroup;
 			children = (
 				5590BDFF20EAC9FA0024E183 /* BaseOperation.swift */,
+				551A6AC120F6AE8400F43A65 /* APBlockOperation.swift */,
+				551A6AC320F6B17800F43A65 /* GroupOperation.swift */,
+				551A6AC520F6B5A000F43A65 /* URLSessionTaskOperation.swift */,
+				551A6AD720F7EF1E00F43A65 /* LocationOperation.swift */,
+				551A6ADB20F7F9BF00F43A65 /* DelayOperation.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -148,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				5590BE0220EACDB80024E183 /* NSLocking+Extensions.swift */,
+				55131F2320F163D100AEE5CC /* Operation+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -157,7 +179,9 @@
 			children = (
 				5590BE0720EAD6C90024E183 /* OperationErrors.swift */,
 				5590BE0520EAD06A0024E183 /* OperationCondition.swift */,
+				55131F2520F166EF00AEE5CC /* MutuallyExclusive.swift */,
 				55131F2120F029E100AEE5CC /* RemoteNotificationCondition.swift */,
+				551A6AD920F7F01D00F43A65 /* LocationCondition.swift */,
 			);
 			path = Conditions;
 			sourceTree = "<group>";
@@ -231,19 +255,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551A6AD820F7EF1E00F43A65 /* LocationOperation.swift in Sources */,
 				5590BE0320EACDB80024E183 /* NSLocking+Extensions.swift in Sources */,
+				551A6ADA20F7F01D00F43A65 /* LocationCondition.swift in Sources */,
 				5590BE0020EAC9FA0024E183 /* BaseOperation.swift in Sources */,
 				55131F0A20F00A2100AEE5CC /* OperationObserver.swift in Sources */,
 				5590BDEF20EAC90D0024E183 /* ViewController.swift in Sources */,
 				55131F0E20F0122D00AEE5CC /* BaseOperationQueue.swift in Sources */,
 				55131F1620F01F2600AEE5CC /* TimeoutObserver.swift in Sources */,
 				55131F1E20F0233300AEE5CC /* Earthquakes.xcdatamodeld in Sources */,
+				55131F2620F166EF00AEE5CC /* MutuallyExclusive.swift in Sources */,
 				55131F1220F0139E00AEE5CC /* BlockObserver.swift in Sources */,
 				5590BDED20EAC90D0024E183 /* AppDelegate.swift in Sources */,
 				5590BE0820EAD6C90024E183 /* OperationErrors.swift in Sources */,
 				55131F2220F029E100AEE5CC /* RemoteNotificationCondition.swift in Sources */,
 				55131F2020F0254800AEE5CC /* Earthquake.swift in Sources */,
+				551A6AC620F6B5A000F43A65 /* URLSessionTaskOperation.swift in Sources */,
+				551A6AC420F6B17800F43A65 /* GroupOperation.swift in Sources */,
+				55131F2420F163D100AEE5CC /* Operation+Extensions.swift in Sources */,
 				5590BE0620EAD06A0024E183 /* OperationCondition.swift in Sources */,
+				551A6ADC20F7F9BF00F43A65 /* DelayOperation.swift in Sources */,
+				551A6AC220F6AE8400F43A65 /* APBlockOperation.swift in Sources */,
 				55131F1420F018A000AEE5CC /* ExclusivityController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

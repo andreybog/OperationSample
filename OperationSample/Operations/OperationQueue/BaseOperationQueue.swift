@@ -8,14 +8,29 @@
 
 import Foundation
 
+/**
+ The delegate of an `OperationQueue` can respond to `Operation` lifecycle
+ events by implementing these methods.
+ 
+ In general, implementing `OperationQueueDelegate` is not necessary; you would
+ want to use an `OperationObserver` instead. However, there are a couple of
+ situations where using `OperationQueueDelegate` can lead to simpler code.
+ For example, `GroupOperation` is the delegate of its own internal
+ `OperationQueue` and uses it to manage dependencies.
+ */
 @objc protocol OperationQueueDelegate: NSObjectProtocol {
     @objc optional func operationQueue(_ operationQueue: BaseOperationQueue, willAddOperation operation: Operation)
     @objc optional func operationQueue(_ operationQueue: BaseOperationQueue, operationDidFinish operation: Operation, withErrors errors: [NSError])
-    
-    
-    
 }
 
+/**
+ `OperationQueue` is an `NSOperationQueue` subclass that implements a large
+ number of "extra features" related to the `Operation` class:
+ 
+ - Notifying a delegate of all operation completion
+ - Extracting generated dependencies from operation conditions
+ - Setting up dependencies to enforce mutual exclusivity
+ */
 class BaseOperationQueue: OperationQueue {
     weak var delegate: OperationQueueDelegate?
     
@@ -77,10 +92,10 @@ class BaseOperationQueue: OperationQueue {
             operation.willEnqueue()
         }
         else {
-            op.completionBlock = { [weak op] in
+            op.addCompletionBlock({ [weak op] in
                 guard let queue = weak, let operation = op else { return }
                 queue.delegate?.operationQueue?(queue, operationDidFinish: operation, withErrors: [])
-            }
+            })
         }
         
         delegate?.operationQueue?(self, willAddOperation: op)
