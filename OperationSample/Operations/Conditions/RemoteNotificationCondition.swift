@@ -90,12 +90,10 @@ fileprivate class RemoteNotificationPermissionOperation: BaseOperation {
     }
     
     override func execute() {
-        let selector = #selector(didReceiveResponse)
-        
         DispatchQueue.main.async {
             let notificationCenter = NotificationCenter.default
             
-            notificationCenter.addObserver(self, selector: selector, name: RemoteNotificationName, object: nil)
+            notificationCenter.addObserver(self, selector: #selector(self.didReceiveResponse), name: RemoteNotificationName, object: nil)
             
             self.application.registerForRemoteNotifications()
         }
