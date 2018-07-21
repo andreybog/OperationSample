@@ -58,6 +58,10 @@ class GroupOperation: BaseOperation {
         internalQueue.addOperation(finishingOperation)
     }
     
+    func addOperation(_ operation: Operation) {
+        internalQueue.addOperation(operation)
+    }
+    
     /**
      Note that some part of execution has produced an error.
      Errors aggregated through this method will be included in the final array
