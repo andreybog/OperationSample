@@ -10,6 +10,10 @@
 		55048D4521038B0700AB24B4 /* DownloadEarthquakesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55048D4421038B0700AB24B4 /* DownloadEarthquakesOperation.swift */; };
 		55048D4721038C6C00AB24B4 /* NetworkObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55048D4621038C6C00AB24B4 /* NetworkObserver.swift */; };
 		55048D4921038FCF00AB24B4 /* BackgroundObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55048D4821038FCF00AB24B4 /* BackgroundObserver.swift */; };
+		55048D4B2103A9BA00AB24B4 /* CKContainer+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55048D4A2103A9BA00AB24B4 /* CKContainer+Operations.swift */; };
+		55048D4D2103AF9600AB24B4 /* ParseEarthquakesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55048D4C2103AF9600AB24B4 /* ParseEarthquakesOperation.swift */; };
+		55048D4F2103BCC100AB24B4 /* MoreInformationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55048D4E2103BCC100AB24B4 /* MoreInformationOperation.swift */; };
+		55048D512103BE8700AB24B4 /* GetEarthquakesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55048D502103BE8700AB24B4 /* GetEarthquakesOperation.swift */; };
 		55062EFF20FE817700853C6D /* SilentCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55062EFE20FE817700853C6D /* SilentCondition.swift */; };
 		55062F0120FE826D00853C6D /* NegatedCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55062F0020FE826D00853C6D /* NegatedCondition.swift */; };
 		55062F0320FE83BF00853C6D /* NoCancelledDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55062F0220FE83BF00853C6D /* NoCancelledDependencies.swift */; };
@@ -53,6 +57,10 @@
 		55048D4421038B0700AB24B4 /* DownloadEarthquakesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadEarthquakesOperation.swift; sourceTree = "<group>"; };
 		55048D4621038C6C00AB24B4 /* NetworkObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkObserver.swift; sourceTree = "<group>"; };
 		55048D4821038FCF00AB24B4 /* BackgroundObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundObserver.swift; sourceTree = "<group>"; };
+		55048D4A2103A9BA00AB24B4 /* CKContainer+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKContainer+Operations.swift"; sourceTree = "<group>"; };
+		55048D4C2103AF9600AB24B4 /* ParseEarthquakesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseEarthquakesOperation.swift; sourceTree = "<group>"; };
+		55048D4E2103BCC100AB24B4 /* MoreInformationOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInformationOperation.swift; sourceTree = "<group>"; };
+		55048D502103BE8700AB24B4 /* GetEarthquakesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEarthquakesOperation.swift; sourceTree = "<group>"; };
 		55062EFE20FE817700853C6D /* SilentCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilentCondition.swift; sourceTree = "<group>"; };
 		55062F0020FE826D00853C6D /* NegatedCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegatedCondition.swift; sourceTree = "<group>"; };
 		55062F0220FE83BF00853C6D /* NoCancelledDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCancelledDependencies.swift; sourceTree = "<group>"; };
@@ -165,6 +173,9 @@
 				553D1EFA2103626600085B6D /* AlertOperation.swift */,
 				553D1EFC21036F3100085B6D /* LoadModelOperation.swift */,
 				55048D4421038B0700AB24B4 /* DownloadEarthquakesOperation.swift */,
+				55048D502103BE8700AB24B4 /* GetEarthquakesOperation.swift */,
+				55048D4C2103AF9600AB24B4 /* ParseEarthquakesOperation.swift */,
+				55048D4E2103BCC100AB24B4 /* MoreInformationOperation.swift */,
 				55048D4621038C6C00AB24B4 /* NetworkObserver.swift */,
 				55048D4821038FCF00AB24B4 /* BackgroundObserver.swift */,
 			);
@@ -219,6 +230,7 @@
 				55131F2320F163D100AEE5CC /* Operation+Extensions.swift */,
 				55062F1220FF442900853C6D /* UIUserNotifications+Operations.swift */,
 				55062F1420FF452000853C6D /* Dictionary+Operations.swift */,
+				55048D4A2103A9BA00AB24B4 /* CKContainer+Operations.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -317,10 +329,12 @@
 				55062F0720FE89B200853C6D /* CloudCondition.swift in Sources */,
 				55062F0120FE826D00853C6D /* NegatedCondition.swift in Sources */,
 				551A6AD820F7EF1E00F43A65 /* LocationOperation.swift in Sources */,
+				55048D4F2103BCC100AB24B4 /* MoreInformationOperation.swift in Sources */,
 				5590BE0320EACDB80024E183 /* NSLocking+Extensions.swift in Sources */,
 				551A6ADA20F7F01D00F43A65 /* LocationCondition.swift in Sources */,
 				55062F0520FE84CF00853C6D /* ReachabilityCondition.swift in Sources */,
 				55062F1320FF442900853C6D /* UIUserNotifications+Operations.swift in Sources */,
+				55048D4B2103A9BA00AB24B4 /* CKContainer+Operations.swift in Sources */,
 				5590BE0020EAC9FA0024E183 /* BaseOperation.swift in Sources */,
 				55062F1120FE9B9300853C6D /* UserNotificationCondition.swift in Sources */,
 				553D1EFD21036F3100085B6D /* LoadModelOperation.swift in Sources */,
@@ -335,6 +349,7 @@
 				55131F1E20F0233300AEE5CC /* Earthquakes.xcdatamodeld in Sources */,
 				55131F2620F166EF00AEE5CC /* MutuallyExclusive.swift in Sources */,
 				55131F1220F0139E00AEE5CC /* BlockObserver.swift in Sources */,
+				55048D512103BE8700AB24B4 /* GetEarthquakesOperation.swift in Sources */,
 				55048D4921038FCF00AB24B4 /* BackgroundObserver.swift in Sources */,
 				5590BDED20EAC90D0024E183 /* AppDelegate.swift in Sources */,
 				5590BE0820EAD6C90024E183 /* OperationErrors.swift in Sources */,
@@ -344,6 +359,7 @@
 				551A6AC420F6B17800F43A65 /* GroupOperation.swift in Sources */,
 				55131F2420F163D100AEE5CC /* Operation+Extensions.swift in Sources */,
 				5590BE0620EAD06A0024E183 /* OperationCondition.swift in Sources */,
+				55048D4D2103AF9600AB24B4 /* ParseEarthquakesOperation.swift in Sources */,
 				55048D4521038B0700AB24B4 /* DownloadEarthquakesOperation.swift in Sources */,
 				55062F0D20FE953400853C6D /* PhotosCondition.swift in Sources */,
 				55062EFF20FE817700853C6D /* SilentCondition.swift in Sources */,

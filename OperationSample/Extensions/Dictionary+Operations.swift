@@ -21,7 +21,6 @@ extension Dictionary {
      be used as the key for the value in the `Dictionary`. If the closure
      returns `nil`, then the value will be omitted from the `Dictionary`.
      */
-    
     init<Seq: Sequence>(sequence: Seq, keyMapper: (Value) -> Key?) where Seq.Element == Value {
         self.init()
         

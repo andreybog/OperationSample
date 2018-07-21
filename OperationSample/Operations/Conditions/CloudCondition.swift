@@ -40,7 +40,7 @@ struct CloudContainerCondition: OperationCondition {
     }
     
     func evaluateForOperation(_ operation: BaseOperation, completion: @escaping (OperationConditionResult) -> Void) {
-        container.requestApplicationPermission(permission) { status, error in
+        container.verifyPermission(permission, requestingIfNecessary: false) { error in
             if let error = error {
                 let conditionError = NSError(code: .conditionFailed, userInfo: [
                     OperationConditionKey: type(of: self).name,
@@ -82,7 +82,7 @@ private class CloudKitPermissionOperation: BaseOperation {
     }
     
     override func execute() {
-        container.requestApplicationPermission(permission) { status, error in
+        container.verifyPermission(permission, requestingIfNecessary: true) { error in
             self.finishWithError(error as NSError?)
         }
     }
