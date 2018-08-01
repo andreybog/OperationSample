@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55030A402110E0A90043666A /* EathquakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55030A3F2110E0A90043666A /* EathquakeTableViewCell.swift */; };
+		55030A422110E2400043666A /* EarthquakesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55030A412110E2400043666A /* EarthquakesTableViewController.swift */; };
+		55030A442110E9F20043666A /* EarthquakeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55030A432110E9F20043666A /* EarthquakeTableViewController.swift */; };
+		55030A4621110CFE0043666A /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55030A4521110CFE0043666A /* SplitViewController.swift */; };
+		55030A482111ACFD0043666A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55131F1A20F0228100AEE5CC /* Main.storyboard */; };
+		55030A492111AD170043666A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55131F1920F0228100AEE5CC /* LaunchScreen.xib */; };
 		55048D4521038B0700AB24B4 /* DownloadEarthquakesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55048D4421038B0700AB24B4 /* DownloadEarthquakesOperation.swift */; };
 		55048D4721038C6C00AB24B4 /* NetworkObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55048D4621038C6C00AB24B4 /* NetworkObserver.swift */; };
 		55048D4921038FCF00AB24B4 /* BackgroundObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55048D4821038FCF00AB24B4 /* BackgroundObserver.swift */; };
@@ -54,6 +60,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55030A3F2110E0A90043666A /* EathquakeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EathquakeTableViewCell.swift; sourceTree = "<group>"; };
+		55030A412110E2400043666A /* EarthquakesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesTableViewController.swift; sourceTree = "<group>"; };
+		55030A432110E9F20043666A /* EarthquakeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeTableViewController.swift; sourceTree = "<group>"; };
+		55030A4521110CFE0043666A /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		55048D4421038B0700AB24B4 /* DownloadEarthquakesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadEarthquakesOperation.swift; sourceTree = "<group>"; };
 		55048D4621038C6C00AB24B4 /* NetworkObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkObserver.swift; sourceTree = "<group>"; };
 		55048D4821038FCF00AB24B4 /* BackgroundObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundObserver.swift; sourceTree = "<group>"; };
@@ -115,6 +125,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55030A3D2110E05F0043666A /* EarthQuakeList */ = {
+			isa = PBXGroup;
+			children = (
+				55030A3F2110E0A90043666A /* EathquakeTableViewCell.swift */,
+				55030A412110E2400043666A /* EarthquakesTableViewController.swift */,
+			);
+			path = EarthQuakeList;
+			sourceTree = "<group>";
+		};
+		55030A3E2110E06B0043666A /* EarthQuakeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				55030A432110E9F20043666A /* EarthquakeTableViewController.swift */,
+			);
+			path = EarthQuakeDetail;
+			sourceTree = "<group>";
+		};
 		55131F0820F009F400AEE5CC /* Observers */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,8 +199,8 @@
 			children = (
 				553D1EFA2103626600085B6D /* AlertOperation.swift */,
 				553D1EFC21036F3100085B6D /* LoadModelOperation.swift */,
-				55048D4421038B0700AB24B4 /* DownloadEarthquakesOperation.swift */,
 				55048D502103BE8700AB24B4 /* GetEarthquakesOperation.swift */,
+				55048D4421038B0700AB24B4 /* DownloadEarthquakesOperation.swift */,
 				55048D4C2103AF9600AB24B4 /* ParseEarthquakesOperation.swift */,
 				55048D4E2103BCC100AB24B4 /* MoreInformationOperation.swift */,
 				55048D4621038C6C00AB24B4 /* NetworkObserver.swift */,
@@ -201,11 +228,14 @@
 		5590BDEB20EAC90D0024E183 /* OperationSample */ = {
 			isa = PBXGroup;
 			children = (
+				55030A3D2110E05F0043666A /* EarthQuakeList */,
+				55030A3E2110E06B0043666A /* EarthQuakeDetail */,
 				55131F1B20F022E300AEE5CC /* Model */,
 				5590BE0120EACDA50024E183 /* Extensions */,
 				553D1EF92103624C00085B6D /* AppOperations */,
 				5590BDFE20EAC9D70024E183 /* Operations */,
 				5590BDEC20EAC90D0024E183 /* AppDelegate.swift */,
+				55030A4521110CFE0043666A /* SplitViewController.swift */,
 				5590BDEE20EAC90D0024E183 /* ViewController.swift */,
 				55131F1820F0224F00AEE5CC /* SupportingFiles */,
 			);
@@ -316,6 +346,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5590BDF420EAC90E0024E183 /* Assets.xcassets in Resources */,
+				55030A492111AD170043666A /* LaunchScreen.xib in Resources */,
+				55030A482111ACFD0043666A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +362,7 @@
 				55062F0120FE826D00853C6D /* NegatedCondition.swift in Sources */,
 				551A6AD820F7EF1E00F43A65 /* LocationOperation.swift in Sources */,
 				55048D4F2103BCC100AB24B4 /* MoreInformationOperation.swift in Sources */,
+				55030A442110E9F20043666A /* EarthquakeTableViewController.swift in Sources */,
 				5590BE0320EACDB80024E183 /* NSLocking+Extensions.swift in Sources */,
 				551A6ADA20F7F01D00F43A65 /* LocationCondition.swift in Sources */,
 				55062F0520FE84CF00853C6D /* ReachabilityCondition.swift in Sources */,
@@ -338,6 +371,7 @@
 				5590BE0020EAC9FA0024E183 /* BaseOperation.swift in Sources */,
 				55062F1120FE9B9300853C6D /* UserNotificationCondition.swift in Sources */,
 				553D1EFD21036F3100085B6D /* LoadModelOperation.swift in Sources */,
+				55030A402110E0A90043666A /* EathquakeTableViewCell.swift in Sources */,
 				55062F0B20FE90AB00853C6D /* CalendarCondition.swift in Sources */,
 				55131F0A20F00A2100AEE5CC /* OperationObserver.swift in Sources */,
 				55062F1520FF452000853C6D /* Dictionary+Operations.swift in Sources */,
@@ -347,6 +381,7 @@
 				55131F0E20F0122D00AEE5CC /* BaseOperationQueue.swift in Sources */,
 				55131F1620F01F2600AEE5CC /* TimeoutObserver.swift in Sources */,
 				55131F1E20F0233300AEE5CC /* Earthquakes.xcdatamodeld in Sources */,
+				55030A4621110CFE0043666A /* SplitViewController.swift in Sources */,
 				55131F2620F166EF00AEE5CC /* MutuallyExclusive.swift in Sources */,
 				55131F1220F0139E00AEE5CC /* BlockObserver.swift in Sources */,
 				55048D512103BE8700AB24B4 /* GetEarthquakesOperation.swift in Sources */,
@@ -357,6 +392,7 @@
 				55131F2020F0254800AEE5CC /* Earthquake.swift in Sources */,
 				551A6AC620F6B5A000F43A65 /* URLSessionTaskOperation.swift in Sources */,
 				551A6AC420F6B17800F43A65 /* GroupOperation.swift in Sources */,
+				55030A422110E2400043666A /* EarthquakesTableViewController.swift in Sources */,
 				55131F2420F163D100AEE5CC /* Operation+Extensions.swift in Sources */,
 				5590BE0620EAD06A0024E183 /* OperationCondition.swift in Sources */,
 				55048D4D2103AF9600AB24B4 /* ParseEarthquakesOperation.swift in Sources */,

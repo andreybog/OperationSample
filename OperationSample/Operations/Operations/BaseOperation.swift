@@ -1,4 +1,4 @@
-//
+ //
 //  BaseOperation.swift
 //  OperationSample
 //
@@ -9,17 +9,6 @@
 import Foundation
 
 class BaseOperation: Operation {
-    class func keyPathsForValuesAffectingIsReady() -> Set<String> {
-        return ["state"]
-    }
-    
-    class func keyPathsForValuesAffectingIsExecuting() -> Set<String> {
-        return ["state"]
-    }
-    
-    class func keyPathsForValuesAffectingIsFinished() -> Set<String> {
-        return ["state"]
-    }
     
     //MARK: -
     //MARK: State Management
@@ -43,7 +32,9 @@ class BaseOperation: Operation {
         }
         
         set (newState) {
-            willChangeValue(forKey: "state")
+            let keys = ["state", "isExecuting", "isFinished", "isReady"]
+            
+            keys.forEach(willChangeValue(forKey:))
             
             stateLock.withCriticalScope {
                 guard _state != .finished else {
@@ -54,7 +45,7 @@ class BaseOperation: Operation {
                 _state = newState
             }
             
-            didChangeValue(forKey: "state")
+            keys.forEach(didChangeValue(forKey:))
         }
     }
     
@@ -262,6 +253,7 @@ private extension BaseOperation {
         func canTransitionToState(_ target: State) -> Bool {
             switch (self, target) {
             case (.initialized, .pending),
+                 (.pending, .finishing), //added
                  (.pending, .evaluatingConditions),
                  (.evaluatingConditions, .ready),
                  (.ready, .executing),

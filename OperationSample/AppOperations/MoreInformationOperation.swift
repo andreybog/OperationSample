@@ -21,6 +21,10 @@ class MoreInformationOperation: BaseOperation {
         addCondition(MutuallyExclusive<UIViewController>())
     }
     
+    deinit {
+        print("MoreInformationOperation deinit...")
+    }
+    
     override func execute() {
         DispatchQueue.main.async {
             self.showSafariViewController()
@@ -44,8 +48,6 @@ class MoreInformationOperation: BaseOperation {
 
 extension MoreInformationOperation: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        controller.dismiss(animated: true) {
-            self.finish()
-        }
+        finish()
     }
 }
